@@ -5,7 +5,7 @@ app=Flask(__name__)
 @app.route('/read',methods=['GET','POST'])
 def getname():
     if(request.method=='POST'):
-        myname=request.form.get('name')
+        myname=str(request.form.get('name'))
         rollno=str(request.form.get('roll'))
         contactno=str(request.form.get('contactno'))
         addmno=str(request.form.get('addmno'))
